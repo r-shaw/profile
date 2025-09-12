@@ -1,0 +1,10 @@
+gsap.registerPlugin(ScrollTrigger);
+      gsap.from('.about__img', { scrollTrigger: '.about__img', duration: 1.5, x: '-100%', opacity: 0, ease: 'power1.out' });
+      gsap.from('.home__content', { duration: 1, y: 30, opacity: 0, delay: 0.5, ease: 'power3.out' });
+      gsap.from('.about__img', { scrollTrigger: '.about__img', duration: 0.5, x: '-100%', opacity: 0, ease: 'power2.out' });
+      gsap.from('.about__data', { scrollTrigger: '.about__data', duration: 1.5, x: '100%', opacity: 0, ease: 'power2.out' });
+      gsap.from('.qualification__data', { scrollTrigger: '.qualification__data', duration: 1.5, y: 20, opacity: 0, stagger: 0.3, ease: 'power1.out' });
+      gsap.from('.portfolio__item', { scrollTrigger: '.portfolio__item', duration: 1.5, opacity: 0, y: 30, stagger: 0.2, ease: 'power2.out' });
+      gsap.from('.contact__information', { scrollTrigger: '.contact__information', duration: 1.5, y: 25, opacity: 0, stagger: 0.2, ease: 'power2.out' });
+      gsap.from('.contact__form', { scrollTrigger: '.contact__form', duration: 1.5, y: 25, opacity: 0, ease: 'power2.out' });
+      gsap.from('.footer', { scrollTrigger: { trigger: '.footer', start: 'top bottom' }, duration: 1.5, y: 30, opacity: 0, ease: 'power1.out' });
