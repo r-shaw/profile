@@ -92,7 +92,7 @@ header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:all .4s va
 }
 header.nav.scrolled .nav-inner{
   margin:10px auto;padding:12px 22px;max-width:calc(var(--maxw) - 60px);
-  background:var(--surface);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  background:var(--surface);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
   border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);
 }
 .brand{display:flex;align-items:center;gap:11px;font-family:var(--font-mono);font-weight:600;font-size:14px;letter-spacing:.02em}
@@ -154,7 +154,7 @@ h2.title{
   font-family:var(--font-mono);font-size:12.5px;color:var(--text-2);
   display:inline-flex;align-items:center;gap:11px;padding:9px 16px;margin-bottom:30px;
   border:1px solid var(--border);border-radius:100px;background:var(--surface);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
 }
 .hero-status .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2.6s infinite}
 .hero h1{
@@ -208,7 +208,7 @@ h2.title{
 .about-card{
   border:1px solid var(--border);border-radius:20px;padding:30px;
   background:color-mix(in srgb,var(--bg) 72%,transparent);
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
   font-family:var(--font-mono);position:relative;z-index:3;
   margin-top:-66px;box-shadow:var(--shadow);
 }
@@ -248,7 +248,9 @@ h2.title{
 .work-card.wide{grid-column:span 2}
 .work-card::before{
   content:"";position:absolute;inset:0;border-radius:22px;padding:1px;
-  background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  background:var(--grad);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
   -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.4s var(--ease);pointer-events:none;
 }
 .work-card:hover{transform:translateY(-4px);background:var(--surface-2)}
@@ -361,7 +363,7 @@ h2.title{
   font-family:var(--font-mono);font-size:11px;color:var(--text);
   display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:100px;
   background:color-mix(in srgb,var(--bg) 55%,transparent);border:1px solid var(--border-strong);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
 .photo-tag .pdot{width:7px;height:7px;border-radius:50%;background:var(--green);
   box-shadow:0 0 10px var(--green);animation:pulse 2.6s infinite}
 
