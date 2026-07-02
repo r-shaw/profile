@@ -372,6 +372,7 @@ footer .f-inner{
   html{scroll-behavior:auto}
   *{animation:none!important;transition-duration:.01ms!important}
   .js .reveal{opacity:1;transform:none}
+  .photo-sheen{animation:none;display:none}
 }
 /* =================== ABOUT / PHOTO =================== */
 .about-row{display:grid;grid-template-columns:.82fr 1fr;gap:70px;align-items:center}
@@ -381,9 +382,23 @@ footer .f-inner{
   max-width:400px;position:relative;
 }
 .photo-frame .inner{border-radius:29px;overflow:hidden;position:relative;background:#000;aspect-ratio:4/5}
+.photo-frame .inner::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(120% 80% at 50% 0%,rgba(255,255,255,.16),transparent 60%);
+}
 .photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-sheen{
+  position:absolute;top:0;left:-60%;width:40%;height:100%;z-index:2;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-18deg);
+  animation:sheen 7s ease-in-out infinite;
+}
+@keyframes sheen{
+  0%,72%{left:-60%}
+  88%,100%{left:130%}
+}
 .photo-frame .tag{
-  position:absolute;left:14px;bottom:14px;z-index:2;
+  position:absolute;left:14px;bottom:14px;z-index:3;
   font-size:12.5px;font-weight:500;color:#fff;
   display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:100px;
   background:rgba(0,0,0,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
@@ -502,6 +517,7 @@ footer .f-inner{
         <div class="photo-frame">
           <div class="inner">
             <img src="assets/rohit-photo.jpg" alt="Rohit Kumar Shaw" loading="lazy" />
+            <span class="photo-sheen"></span>
           </div>
           <span class="tag"><span class="dot"></span>Rohit Kumar Shaw</span>
         </div>
