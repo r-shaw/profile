@@ -396,6 +396,32 @@ footer .f-inner{
   .about-row{grid-template-columns:1fr;gap:40px}
   .photo-frame{max-width:300px;margin:0 auto}
 }
+.pub-head{display:flex;align-items:baseline;gap:14px;margin:52px 0 18px}
+.pub-head:first-of-type{margin-top:6px}
+.pub-head h3{font-size:1.05rem;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.pub-head .ln{flex:1;height:1px;background:var(--hairline)}
+.pub-head .ct{font-family:var(--mono);font-size:12px;color:var(--text-2);white-space:nowrap}
+
+/* certificates */
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px}
+.cert-card{
+  background:var(--bg-tile);border-radius:22px;padding:28px;
+  box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.cert-card:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 16px 40px rgba(0,0,0,.09)}
+.cert-card .c-icon{
+  width:40px;height:40px;border-radius:12px;background:var(--grad);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+}
+.cert-card .c-icon svg{width:19px;height:19px;stroke:#fff}
+.cert-card h4{font-size:1rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.cert-card p{font-size:.88rem;color:var(--text-2);margin-top:8px;line-height:1.5}
+.cert-card .c-date{font-family:var(--mono);font-size:11px;color:var(--text-2);margin-top:14px;text-transform:uppercase;letter-spacing:.04em}
+
+@media(max-width:900px){
+  .cert-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -409,6 +435,8 @@ footer .f-inner{
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#research">Research</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#certificates">Certificates</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
     </nav>
@@ -479,7 +507,7 @@ footer .f-inner{
         <p class="f-tag">Profile</p>
         <h3 class="f-title">The engineer behind the channel.</h3>
         <p class="f-copy">I'm Rohit, an Infrastructure Engineer at Bank of America with around three years focused on z/OS network security. My day to day lives in AT-TLS policy design, Kerberos SSO, and RACF integration, the plumbing most people never notice until it breaks.</p>
-        <p class="f-copy">Outside of production, I write. Four IEEE-format papers and three trade articles, turning hands-on engineering into a repeatable, publishable body of work.</p>
+        <p class="f-copy">Outside of production, I write. Ten peer-reviewed papers and six trade articles, turning hands-on engineering into a repeatable, publishable body of work.</p>
         <a class="link-arrow f-link" href="#research">Read the research</a>
       </div>
     </div>
@@ -622,36 +650,138 @@ footer .f-inner{
   <div class="container">
     <p class="eyebrow reveal">Research & writing</p>
     <h2 class="headline reveal d1">Production work, turned into published research.</h2>
-    <p class="subhead reveal d2">Four IEEE-format papers and three trade articles documenting mainframe security modernization, written from hands-on engineering. <a href="https://scholar.google.com/citations?user=Cz85MnkAAAAJ&hl=en" target="_blank" rel="noopener" class="link-arrow">View on Google Scholar</a></p>
+    <p class="subhead reveal d2">Ten peer-reviewed papers and six trade articles documenting mainframe security modernization, written from hands-on engineering. <a href="https://scholar.google.com/citations?user=Cz85MnkAAAAJ&hl=en" target="_blank" rel="noopener" class="link-arrow">View on Google Scholar</a></p>
 
     <div class="pub-list">
+      <div class="pub-head reveal"><h3>Peer-reviewed papers</h3><div class="ln"></div><span class="ct">10</span></div>
+
+      <a class="pub-row reveal" href="https://cspub-ijcisim.org/index.php/ijcisim/article/view/2036" target="_blank" rel="noopener">
+        <div><div class="kind">IJCISIM · Vol. 18 No. 1s (2026)</div><div class="name">Zero-Touch Self-Healing Architecture (SHArch): Extending Autonomous Data Center Management to IBM z/OS</div></div>
+        <span class="go">Read ›</span>
+      </a>
       <a class="pub-row reveal" href="https://doi.org/10.58425/ajt.v5i7.550" target="_blank" rel="noopener">
-        <div><div class="kind">Research paper</div><div class="name">The Role of AT-TLS in Modernizing Mainframe Network Security: A Comparative Analysis of Pre and Post AT-TLS Security Models</div></div>
+        <div><div class="kind">American Journal of Technology</div><div class="name">The Role of AT-TLS in Modernizing Mainframe Network Security: A Comparative Analysis of Pre and Post AT-TLS Security Models</div></div>
         <span class="go">Read ›</span>
       </a>
       <a class="pub-row reveal" href="https://doi.org/10.55708/js0506001" target="_blank" rel="noopener">
-        <div><div class="kind">Research paper</div><div class="name">SNMPv2 to SNMPv3 Migration in Financial Mainframes: Risk Reduction and a Repeatable Playbook</div></div>
+        <div><div class="kind">JENRS</div><div class="name">SNMPv2 to SNMPv3 Migration in Financial Mainframes: Risk Reduction and a Repeatable Playbook</div></div>
         <span class="go">Read ›</span>
       </a>
       <div class="pub-row reveal">
-        <div><div class="kind">Research paper</div><div class="name">Kerberos vs. Public Key Authentication in z/OS Environments: Performance, Scalability, and Security Trade-offs</div></div>
+        <div><div class="kind">Springer LNNS · Scopus, EI & WoS indexed</div><div class="name">RAG-Based Retrieval Systems for Enterprise Mainframe Operations: Accelerating Incident Response Through AI-Driven Knowledge Access</div></div>
+        <span class="soon">Published</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">IEEE ICCMC 2026</div><div class="name">Kerberos vs. Public Key Authentication in z/OS Environments: Performance, Scalability, and Security Trade-offs</div></div>
+        <span class="soon">Published</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">ICAIMIS 2026 · Bentham Science</div><div class="name">TLS 1.3 Adoption on z/OS: Modernizing Transport Security for Legacy Financial Systems</div></div>
+        <span class="soon">Published</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Q1 Journal · Intelligent Decision Making & Information Science</div><div class="name">Journal Publication I — AI-Driven Decision Systems in Financial Infrastructure</div></div>
         <span class="soon">In preparation</span>
       </div>
       <div class="pub-row reveal">
-        <div><div class="kind">Research paper</div><div class="name">RAG-Based Retrieval Systems for Enterprise Mainframe Operations: Accelerating Incident Response Through AI-Driven Knowledge Access</div></div>
+        <div><div class="kind">Q1 Journal · Intelligent Decision Making & Information Science</div><div class="name">Journal Publication II — AI-Driven Decision Systems in Financial Infrastructure</div></div>
         <span class="soon">In preparation</span>
       </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">IJCISIM · Scopus-indexed</div><div class="name">Zero Trust Network Access (ZTNA) for Mainframe Environments</div></div>
+        <span class="soon">Under review</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Cureus · Springer</div><div class="name">LLM-Assisted JCL Generation for Mainframe Automation</div></div>
+        <span class="soon">Under review</span>
+      </div>
+
+      <div class="pub-head reveal"><h3>Trade & industry writing</h3><div class="ln"></div><span class="ct">6</span></div>
+
       <a class="pub-row reveal" href="https://securityboulevard.com/2026/05/stop-letting-legacy-mainframe-services-manage-their-own-tls/" target="_blank" rel="noopener">
-        <div><div class="kind">Trade article</div><div class="name">How We Standardized Transport Security for Legacy z/OS Workloads with AT-TLS</div></div>
+        <div><div class="kind">Security Boulevard</div><div class="name">How We Standardized Transport Security for Legacy z/OS Workloads with AT-TLS</div></div>
         <span class="go">Read ›</span>
       </a>
       <a class="pub-row reveal" href="https://techstrong.it/features/how-to-build-real-time-mainframe-dashboards-without-paying-for-a-splunk-license/" target="_blank" rel="noopener">
-        <div><div class="kind">Trade article · Techstrong IT</div><div class="name">How to Build Real-Time Mainframe Dashboards Without Paying for a Splunk License</div></div>
+        <div><div class="kind">Techstrong IT</div><div class="name">How to Build Real-Time Mainframe Dashboards Without Paying for a Splunk License</div></div>
         <span class="go">Read ›</span>
       </a>
       <div class="pub-row reveal">
-        <div><div class="kind">Trade article</div><div class="name">Kill the Community String: Migrating z/OS SNMP to AuthPriv Without Downtime</div></div>
-        <span class="soon">In preparation</span>
+        <div><div class="kind">Share'd Intelligence · Planet Mainframe</div><div class="name">Kill the Community String: Migrating z/OS SNMP to AuthPriv Without Downtime</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Share'd Intelligence</div><div class="name">SSH Authorized-Keys Governance: A Compliance Framework for z/OS</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Security Boulevard · ACM Dallas</div><div class="name">AI-Driven RAG Retrieval for Mainframe Incident Response</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Open Mainframe Project</div><div class="name">Post-Quantum Cryptography Readiness on z/OS: Assessing CPACF and AT-TLS Migration Paths for NIST FIPS 203/204/205 Compliance</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== RECOGNITION: SPEAKING / JUDGING / PEER REVIEW =================== -->
+<section class="section" id="recognition" style="padding-top:0">
+  <div class="container">
+    <p class="eyebrow reveal">Speaking, judging & peer review</p>
+    <h2 class="headline reveal d1">Trusted to evaluate and present alongside the field.</h2>
+
+    <div class="skill-rows">
+      <div class="skill-row reveal">
+        <h4>Speaking</h4>
+        <div class="tags">
+          <span>Keynote Speaker — ICAIMIS 2026</span>
+          <span>Invited Presenter — ICDM London</span>
+          <span>Presenter — IEEE ICCMC 2026</span>
+        </div>
+      </div>
+      <div class="skill-row reveal d1">
+        <h4>Judging</h4>
+        <div class="tags">
+          <span>Judge — 2nd SmallAI Hackathon</span>
+          <span>Session Chair — Sejong University, 6th Intl. Conference on Paradigms of Communication (South Korea)</span>
+        </div>
+      </div>
+      <div class="skill-row reveal d2">
+        <h4>Peer review</h4>
+        <div class="tags">
+          <span>10 completed reviews — IEEE & Springer venues</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CERTIFICATES =================== -->
+<section class="section" id="certificates" style="padding-top:0">
+  <div class="container">
+    <p class="eyebrow reveal">Certificates</p>
+    <h2 class="headline reveal d1">Formal recognition along the way.</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg></div>
+        <h4>Judge — 2nd SmallAI Hackathon</h4>
+        <p>Judge for an AI-focused hackathon competition.</p>
+        <div class="c-date">April 2026</div>
+      </div>
+      <div class="cert-card reveal d1">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h4>Session Chair — Sejong University</h4>
+        <p>6th International Conference on Paradigms of Communication, South Korea.</p>
+        <div class="c-date">June 2026</div>
+      </div>
+      <div class="cert-card reveal d2">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h4>Peer Review Recognition</h4>
+        <p>10 completed peer reviews across IEEE and Springer venues.</p>
+        <div class="c-date">2026</div>
       </div>
     </div>
   </div>
