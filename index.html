@@ -403,7 +403,7 @@ footer .f-inner{
 .pub-head .ct{font-family:var(--mono);font-size:12px;color:var(--text-2);white-space:nowrap}
 
 /* certificates */
-.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
 .cert-card{
   background:var(--bg-tile);border-radius:22px;padding:28px;
   box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
@@ -419,7 +419,10 @@ footer .f-inner{
 .cert-card p{font-size:.88rem;color:var(--text-2);margin-top:8px;line-height:1.5}
 .cert-card .c-date{font-family:var(--mono);font-size:11px;color:var(--text-2);margin-top:14px;text-transform:uppercase;letter-spacing:.04em}
 
-@media(max-width:900px){
+@media(max-width:1000px){
+  .cert-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
   .cert-grid{grid-template-columns:1fr}
 }
 </style>
@@ -788,6 +791,12 @@ footer .f-inner{
         <p>10 completed peer reviews across IEEE and Springer venues.</p>
         <div class="c-date">2026</div>
       </div>
+      <a class="cert-card reveal d3" href="https://www.credly.com/badges/5df0dee4-f09a-4469-9409-d04f77d69b7a/public_url" target="_blank" rel="noopener" style="display:block">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h.01M12 14h4"/></svg></div>
+        <h4>IBM z/OS Mainframe Practitioner</h4>
+        <p>Issued by IBM. Foundational skills in z/OS and system administration via hands-on labs on a live IBM Z server.</p>
+      <div class="c-date">Credly · <span class="link-arrow" style="font-size:11px">View credential</span></div>
+</a>
     </div>
   </div>
 </section>
