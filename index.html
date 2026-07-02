@@ -373,6 +373,29 @@ footer .f-inner{
   *{animation:none!important;transition-duration:.01ms!important}
   .js .reveal{opacity:1;transform:none}
 }
+/* =================== ABOUT / PHOTO =================== */
+.about-row{display:grid;grid-template-columns:.82fr 1fr;gap:70px;align-items:center}
+.photo-frame{
+  border-radius:32px;padding:3px;background:var(--grad);
+  box-shadow:0 30px 70px -28px rgba(10,132,255,.4);
+  max-width:400px;position:relative;
+}
+.photo-frame .inner{border-radius:29px;overflow:hidden;position:relative;background:#000;aspect-ratio:4/5}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-frame .tag{
+  position:absolute;left:14px;bottom:14px;z-index:2;
+  font-size:12.5px;font-weight:500;color:#fff;
+  display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:100px;
+  background:rgba(0,0,0,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+.photo-frame .tag .dot{width:7px;height:7px;border-radius:50%;background:#30d158;box-shadow:0 0 8px rgba(48,209,88,.8)}
+.about-copy .f-title{max-width:14ch}
+.about-copy .f-copy+.f-copy{margin-top:14px}
+
+@media(max-width:900px){
+  .about-row{grid-template-columns:1fr;gap:40px}
+  .photo-frame{max-width:300px;margin:0 auto}
+}
 </style>
 </head>
 <body>
@@ -382,6 +405,7 @@ footer .f-inner{
   <div class="nav-inner">
     <a href="#top" class="nav-brand">Rohit Kumar Shaw</a>
     <nav class="nav-links" id="navlinks">
+      <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#research">Research</a>
@@ -434,6 +458,29 @@ footer .f-inner{
         <span class="t-label">AT-TLS at scale</span>
         <span class="t-num" data-count="50" data-suf="+">50<span class="suf">+</span></span>
         <span class="t-desc">Reusable transport security policies deployed via z/OSMF.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ABOUT =================== -->
+<section class="section" id="about" style="padding-top:0">
+  <div class="container">
+    <div class="about-row">
+      <div class="reveal">
+        <div class="photo-frame">
+          <div class="inner">
+            <img src="assets/rohit-photo.jpg" alt="Rohit Kumar Shaw" loading="lazy" />
+          </div>
+          <span class="tag"><span class="dot"></span>Rohit Kumar Shaw</span>
+        </div>
+      </div>
+      <div class="about-copy reveal d1">
+        <p class="f-tag">Profile</p>
+        <h3 class="f-title">The engineer behind the channel.</h3>
+        <p class="f-copy">I'm Rohit, an Infrastructure Engineer at Bank of America with around three years focused on z/OS network security. My day to day lives in AT-TLS policy design, Kerberos SSO, and RACF integration, the plumbing most people never notice until it breaks.</p>
+        <p class="f-copy">Outside of production, I write. Four IEEE-format papers and three trade articles, turning hands-on engineering into a repeatable, publishable body of work.</p>
+        <a class="link-arrow f-link" href="#research">Read the research</a>
       </div>
     </div>
   </div>
@@ -575,7 +622,7 @@ footer .f-inner{
   <div class="container">
     <p class="eyebrow reveal">Research & writing</p>
     <h2 class="headline reveal d1">Production work, turned into published research.</h2>
-    <p class="subhead reveal d2">Four IEEE-format papers and two trade articles documenting mainframe security modernization, written from hands-on engineering.</p>
+    <p class="subhead reveal d2">Four IEEE-format papers and three trade articles documenting mainframe security modernization, written from hands-on engineering. <a href="https://scholar.google.com/citations?user=Cz85MnkAAAAJ&hl=en" target="_blank" rel="noopener" class="link-arrow">View on Google Scholar</a></p>
 
     <div class="pub-list">
       <a class="pub-row reveal" href="https://doi.org/10.58425/ajt.v5i7.550" target="_blank" rel="noopener">
@@ -596,6 +643,10 @@ footer .f-inner{
       </div>
       <a class="pub-row reveal" href="https://securityboulevard.com/2026/05/stop-letting-legacy-mainframe-services-manage-their-own-tls/" target="_blank" rel="noopener">
         <div><div class="kind">Trade article</div><div class="name">How We Standardized Transport Security for Legacy z/OS Workloads with AT-TLS</div></div>
+        <span class="go">Read ›</span>
+      </a>
+      <a class="pub-row reveal" href="https://techstrong.it/features/how-to-build-real-time-mainframe-dashboards-without-paying-for-a-splunk-license/" target="_blank" rel="noopener">
+        <div><div class="kind">Trade article · Techstrong IT</div><div class="name">How to Build Real-Time Mainframe Dashboards Without Paying for a Splunk License</div></div>
         <span class="go">Read ›</span>
       </a>
       <div class="pub-row reveal">
