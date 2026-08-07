@@ -186,11 +186,16 @@ img{max-width:100%;display:block}
 .cell .lab{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-dim)}
 .cell .num{font-weight:900;letter-spacing:-.03em;line-height:1;white-space:nowrap;
   font-size:clamp(2.2rem,5.5vw,4rem)}
-.cell .num .suf{font-size:.45em;font-weight:600;opacity:.55;margin-left:2px;white-space:nowrap}
+.cell .num .suf{font-size:.45em;font-weight:600;color:rgba(215,226,234,.55);
+  margin-left:2px;white-space:nowrap}
 .cell .txt{font-weight:300;font-size:.95rem;line-height:1.45;color:var(--ink-dim);max-width:34ch}
 .c4{grid-column:span 4}.c2{grid-column:span 2}
 .cell.glow .num{color:#D7E2EA;background:var(--grad-num);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){
+  .cell.glow .num,.edu .gpa .g,.role{background:none;color:#C36AD8;-webkit-text-fill-color:currentColor}
+  .cell.glow .num .suf{color:rgba(215,226,234,.55)}
+}
 .term{grid-column:span 2;border:1px solid var(--line);border-radius:24px;background:#0a0a0d;
   display:flex;flex-direction:column;min-height:200px;overflow:hidden}
 .term-body{padding:18px 20px;font-family:var(--mono);font-size:12px;line-height:1.8;flex:1}
@@ -459,7 +464,7 @@ footer{padding:0 0 36px}
   <div class="bento">
     <div class="cell c4 glow fi">
       <span class="lab">AI operations portal</span>
-      <span class="num" data-count="35" data-pre="$" data-suf="K/yr">$35 K/yr<span class="suf">K/yr</span></span>
+      <span class="num" data-count="35" data-pre="$" data-suf="K/yr">$35<span class="suf">K/yr</span></span>
       <span class="txt">Saved annually by one internal platform. Answers that took 15 minutes now take one.</span>
     </div>
     <div class="term fi" style="transition-delay:.08s">
