@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rohit Kumar Shaw — Mainframe Network Security Engineer</title>
+<meta name="description" content="Infrastructure Engineer specializing in z/OS mainframe network security at Bank of America. AT-TLS, SNMPv3, Kerberos SSO, and AI-driven automation for financial-grade systems." />
+<link rel="canonical" href="https://rohitshaw.me/" />
+
+<!-- Open Graph / LinkedIn / Facebook -->
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="https://rohitshaw.me/" />
+<meta property="og:title" content="Rohit Kumar Shaw — Mainframe Network Security Engineer" />
+<meta property="og:description" content="Infrastructure Engineer at Bank of America specializing in z/OS network security: AT-TLS, SNMPv3, Kerberos SSO, and AI-driven automation for financial-grade systems." />
+<meta property="og:image" content="https://rohitshaw.me/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Rohit Kumar Shaw — Mainframe security. Engineered for banks." />
+<meta property="og:site_name" content="Rohit Kumar Shaw" />
+<meta property="og:locale" content="en_US" />
+<meta property="profile:first_name" content="Rohit" />
+<meta property="profile:last_name" content="Shaw" />
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Rohit Kumar Shaw — Mainframe Network Security Engineer" />
+<meta name="twitter:description" content="Infrastructure Engineer at Bank of America specializing in z/OS network security: AT-TLS, SNMPv3, Kerberos SSO, and AI-driven automation." />
+<meta name="twitter:image" content="https://rohitshaw.me/assets/og-image.png" />
+<script>document.documentElement.className += ' js';</script>
+<style>
+/* ============================================================
+   Rohit Kumar Shaw — portfolio, Apple-style design language
+   No external dependencies. Content visible without JS.
+   ============================================================ */
+:root{
+  --bg:#fbfbfd;
+  --bg-dark:#000;
+  --bg-tile:#fff;
+  --bg-tile-dark:#101013;
+  --text:#1d1d1f;
+  --text-2:#6e6e73;
+  --text-dark:#f5f5f7;
+  --text-dark-2:#86868b;
+  --blue:#0071e3;
+  --blue-hover:#0077ed;
+  --link:#06c;
+  --hairline:rgba(0,0,0,.1);
+  --hairline-dark:rgba(255,255,255,.14);
+  --grad:linear-gradient(96deg,#0a84ff 0%,#5e5ce6 52%,#bf5af2 100%);
+  --radius:28px;
+  --ease:cubic-bezier(.25,.1,.25,1);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:rgba(10,132,255,.25)}
+
+/* =================== NAV =================== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(251,251,253,.72);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s var(--ease),background .3s var(--ease);
+}
+.nav.scrolled{border-bottom-color:var(--hairline)}
+.nav-inner{
+  max-width:1024px;margin:0 auto;height:52px;padding:0 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.nav-brand{font-size:17px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{
+  font-size:12.5px;color:var(--text-2);padding:7px 11px;border-radius:100px;
+  transition:color .25s var(--ease),background .25s var(--ease);
+}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--text);background:rgba(0,0,0,.05)}
+.nav-cta{
+  font-size:12.5px;font-weight:500;color:#fff;background:var(--blue);
+  padding:7px 15px;border-radius:100px;white-space:nowrap;
+  transition:background .25s var(--ease),transform .25s var(--ease);
+}
+.nav-cta:hover{background:var(--blue-hover);transform:scale(1.03)}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.menu-btn span{display:block;width:17px;height:1.5px;background:var(--text);margin:4px 0;transition:.3s var(--ease)}
+
+/* =================== SHARED =================== */
+.section{padding:130px 22px}
+.section.tight{padding-top:0}
+.container{max-width:1024px;margin:0 auto}
+.container.wide{max-width:1200px}
+.eyebrow{
+  font-size:14px;font-weight:600;color:var(--blue);
+  letter-spacing:.01em;margin-bottom:14px;
+}
+.dark .eyebrow{color:#2997ff}
+.headline{
+  font-size:clamp(2.2rem,5.2vw,3.5rem);
+  font-weight:700;letter-spacing:-.022em;line-height:1.06;
+  max-width:20ch;
+}
+.headline.center{margin:0 auto;text-align:center}
+.subhead{
+  font-size:clamp(1.05rem,1.8vw,1.35rem);
+  color:var(--text-2);font-weight:400;letter-spacing:-.01em;
+  max-width:56ch;margin-top:20px;line-height:1.45;
+}
+.subhead.center{margin-left:auto;margin-right:auto;text-align:center}
+.subhead b{color:var(--text);font-weight:600}
+.dark{background:var(--bg-dark);color:var(--text-dark)}
+.dark .subhead{color:var(--text-dark-2)}
+.dark .subhead b{color:var(--text-dark)}
+.grad-text{
+  background:var(--grad);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.link-arrow{
+  font-size:17px;color:var(--link);display:inline-flex;align-items:center;gap:5px;
+  transition:gap .25s var(--ease);
+}
+.link-arrow:hover{text-decoration:underline;gap:9px}
+.link-arrow::after{content:"›";font-size:1.1em;transition:transform .25s var(--ease)}
+.dark .link-arrow{color:#2997ff}
+.pill{
+  display:inline-block;font-size:16px;font-weight:500;color:#fff;background:var(--blue);
+  padding:11px 24px;border-radius:100px;
+  transition:background .25s var(--ease),transform .25s var(--ease);
+}
+.pill:hover{background:var(--blue-hover);transform:scale(1.03)}
+.pill.ghost{background:transparent;color:var(--link);border:1px solid var(--link)}
+.pill.ghost:hover{background:var(--link);color:#fff}
+.dark .pill.ghost{color:#2997ff;border-color:#2997ff}
+.dark .pill.ghost:hover{background:#2997ff;color:#000}
+
+/* =================== HERO =================== */
+.hero{
+  min-height:92vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:150px 22px 90px;position:relative;
+}
+.hero .eyebrow{font-size:17px;color:var(--text-2);font-weight:500}
+.hero h1{
+  font-size:clamp(2.9rem,8vw,5.9rem);
+  font-weight:700;letter-spacing:-.03em;line-height:1.03;
+  max-width:15ch;
+}
+.hero .subhead{text-align:center;margin-left:auto;margin-right:auto;max-width:44ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:center;margin-top:34px}
+.hero-badge{
+  margin-top:60px;font-family:var(--mono);font-size:12px;color:var(--text-2);
+  display:inline-flex;align-items:center;gap:9px;
+  padding:8px 16px;border:1px solid var(--hairline);border-radius:100px;background:#fff;
+}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:#30d158;box-shadow:0 0 8px rgba(48,209,88,.8)}
+
+/* =================== BENTO TILES =================== */
+.bento{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:14px;
+}
+.tile{
+  background:var(--bg-tile);border-radius:var(--radius);padding:38px 34px;
+  box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+  display:flex;flex-direction:column;justify-content:space-between;gap:26px;
+  min-height:230px;overflow:hidden;position:relative;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.tile:hover{transform:translateY(-4px) scale(1.005);box-shadow:0 2px 4px rgba(0,0,0,.05),0 18px 44px rgba(0,0,0,.09)}
+.tile.c2{grid-column:span 2}
+.tile.c3{grid-column:span 3}
+.tile.c4{grid-column:span 4}
+.tile.c6{grid-column:span 6}
+.tile .t-label{font-size:13px;font-weight:600;color:var(--text-2);letter-spacing:.01em;text-transform:uppercase}
+.tile .t-num{
+  font-size:clamp(2.6rem,5vw,3.8rem);font-weight:700;letter-spacing:-.03em;line-height:1;
+}
+.tile .t-num .suf{font-size:.5em;font-weight:600;color:var(--text-2);margin-left:2px}
+.tile .t-desc{font-size:15px;color:var(--text-2);line-height:1.45;max-width:34ch}
+.tile.dark-tile{background:var(--bg-tile-dark);color:var(--text-dark)}
+.tile.dark-tile .t-desc{color:var(--text-dark-2)}
+.tile.grad-tile .t-num{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* terminal tile */
+.terminal{
+  background:#0b0b0e;color:#e8e8ed;border-radius:var(--radius);
+  font-family:var(--mono);font-size:12.5px;line-height:1.75;
+  padding:0;display:flex;flex-direction:column;min-height:230px;
+  box-shadow:0 1px 2px rgba(0,0,0,.2),0 12px 32px rgba(0,0,0,.25);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.terminal:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(0,0,0,.2),0 20px 48px rgba(0,0,0,.35)}
+.term-bar{
+  display:flex;align-items:center;gap:7px;padding:13px 18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.term-bar i{width:11px;height:11px;border-radius:50%;display:block}
+.term-bar i:nth-child(1){background:#ff5f57}.term-bar i:nth-child(2){background:#febc2e}.term-bar i:nth-child(3){background:#28c840}
+.term-bar span{margin-left:8px;font-size:11px;color:#86868b}
+.term-body{padding:18px 20px;flex:1}
+.term-body .ln{white-space:pre-wrap;word-break:break-word}
+.term-body .p{color:#30d158}
+.term-body .c{color:#64d2ff}
+.term-body .m{color:#86868b}
+.term-body .cursor{display:inline-block;width:7px;height:14px;background:#e8e8ed;vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* =================== FEATURE ROWS (work) =================== */
+.feature{
+  display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;
+  padding:90px 0;border-top:1px solid var(--hairline);
+}
+.feature:first-of-type{border-top:0;padding-top:40px}
+.feature.flip .f-visual{order:-1}
+.f-tag{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-2);margin-bottom:14px}
+.f-title{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:700;letter-spacing:-.02em;line-height:1.12;max-width:18ch}
+.f-copy{font-size:1.05rem;color:var(--text-2);margin-top:16px;max-width:48ch;line-height:1.55}
+.f-copy b{color:var(--text);font-weight:600}
+.f-link{margin-top:22px;display:inline-flex}
+.f-visual{
+  border-radius:var(--radius);padding:44px 40px;min-height:320px;
+  display:flex;flex-direction:column;justify-content:center;gap:8px;
+  position:relative;overflow:hidden;
+}
+.f-visual .big{
+  font-size:clamp(3.4rem,7vw,5.4rem);font-weight:700;letter-spacing:-.035em;line-height:1;
+}
+.f-visual .big .suf{font-size:.42em;font-weight:600;opacity:.65;margin-left:4px}
+.f-visual .cap{font-size:15px;font-weight:500;opacity:.75;max-width:26ch;line-height:1.4}
+.f-visual .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.f-visual .chips span{
+  font-family:var(--mono);font-size:11.5px;padding:5px 12px;border-radius:100px;
+  background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+}
+.v1{background:linear-gradient(140deg,#0a84ff,#5e5ce6);color:#fff}
+.v2{background:linear-gradient(140deg,#1d1d1f,#3a3a3e);color:#fff}
+.v3{background:linear-gradient(140deg,#30d158,#0a84ff);color:#fff}
+.v4{background:linear-gradient(140deg,#5e5ce6,#bf5af2);color:#fff}
+
+/* earlier projects strip */
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.mini{
+  background:var(--bg-tile);border-radius:22px;padding:28px;
+  box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.mini:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 16px 40px rgba(0,0,0,.09)}
+.mini h4{font-size:1.05rem;font-weight:600;letter-spacing:-.01em}
+.mini p{font-size:.9rem;color:var(--text-2);margin-top:8px;line-height:1.5}
+.mini .stack{font-family:var(--mono);font-size:11px;color:var(--blue);margin-top:16px}
+
+/* =================== EXPERIENCE (dark) =================== */
+.xp{border-top:1px solid var(--hairline-dark);padding:56px 0;display:grid;grid-template-columns:280px 1fr;gap:40px}
+.xp:first-of-type{border-top:0;padding-top:30px}
+.xp-meta .role{font-size:1.25rem;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+.xp-meta .co{font-size:.95rem;color:var(--text-dark-2);margin-top:6px}
+.xp-meta .date{font-size:.85rem;color:var(--text-dark-2);margin-top:10px;font-family:var(--mono)}
+.xp-badge{
+  display:inline-block;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:#30d158;border:1px solid rgba(48,209,88,.35);padding:3px 10px;border-radius:100px;margin-top:12px;
+}
+.xp-points{list-style:none;display:grid;gap:14px}
+.xp-points li{
+  position:relative;padding-left:26px;font-size:1rem;color:var(--text-dark-2);line-height:1.5;
+}
+.xp-points li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--grad)}
+.xp-points li b{color:var(--text-dark);font-weight:600}
+
+/* =================== PUBLICATIONS =================== */
+.pub-list{margin-top:46px;border-top:1px solid var(--hairline)}
+.pub-row{
+  display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+  padding:26px 6px;border-bottom:1px solid var(--hairline);
+  transition:background .3s var(--ease),padding .3s var(--ease);
+}
+a.pub-row:hover{background:rgba(0,0,0,.025);padding-left:14px;padding-right:14px;border-radius:14px}
+.pub-row .kind{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-2);margin-bottom:5px}
+.pub-row .name{font-size:1.08rem;font-weight:500;letter-spacing:-.01em;line-height:1.35;max-width:62ch}
+.pub-row .go{font-size:15px;color:var(--link);white-space:nowrap;font-weight:500}
+.pub-row .soon{font-size:13px;color:var(--text-2);white-space:nowrap}
+
+/* =================== SKILLS =================== */
+.skill-rows{margin-top:50px;display:grid;gap:34px}
+.skill-row{display:grid;grid-template-columns:210px 1fr;gap:24px;align-items:start}
+.skill-row h4{font-size:1rem;font-weight:600;letter-spacing:-.01em;padding-top:5px}
+.skill-row .tags{display:flex;flex-wrap:wrap;gap:8px}
+.skill-row .tags span{
+  font-size:13px;color:var(--text);background:#fff;
+  border:1px solid var(--hairline);border-radius:100px;padding:7px 15px;
+  transition:border-color .25s var(--ease),transform .25s var(--ease),background .25s var(--ease);
+}
+.skill-row .tags span:hover{border-color:var(--blue);transform:translateY(-2px)}
+
+/* =================== EDUCATION =================== */
+.edu-card{
+  margin-top:46px;background:var(--bg-tile);border-radius:var(--radius);padding:44px;
+  box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+  display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;
+}
+.edu-card h3{font-size:1.45rem;font-weight:700;letter-spacing:-.015em}
+.edu-card .meta{color:var(--text-2);font-size:.98rem;margin-top:8px}
+.edu-card .course{color:var(--text-2);font-size:.9rem;margin-top:18px;line-height:1.6;max-width:72ch}
+.edu-card .gpa{text-align:center}
+.edu-card .gpa .g{font-size:3rem;font-weight:700;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.edu-card .gpa .gl{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--text-2);text-transform:uppercase}
+
+/* =================== CONTACT (dark finale) =================== */
+.contact{text-align:center;padding:170px 22px 150px}
+.contact .headline{max-width:16ch;margin:0 auto}
+.contact-actions{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:40px}
+.contact-links{
+  display:flex;flex-wrap:wrap;gap:34px;justify-content:center;margin-top:56px;
+  font-size:14px;color:var(--text-dark-2);
+}
+.contact-links a{transition:color .25s var(--ease)}
+.contact-links a:hover{color:var(--text-dark)}
+
+/* =================== FOOTER =================== */
+footer{background:var(--bg-dark);color:var(--text-dark-2);padding:0 22px 40px}
+footer .f-inner{
+  max-width:1024px;margin:0 auto;border-top:1px solid var(--hairline-dark);
+  padding-top:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
+  font-size:12px;
+}
+
+/* =================== REVEAL (JS-gated) =================== */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.d1{transition-delay:.08s}
+.js .reveal.d2{transition-delay:.16s}
+.js .reveal.d3{transition-delay:.24s}
+
+/* =================== RESPONSIVE =================== */
+@media(max-width:900px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .tile.c2,.tile.c3,.tile.c4,.tile.c6{grid-column:span 2}
+  .feature{grid-template-columns:1fr;gap:34px;padding:64px 0}
+  .feature.flip .f-visual{order:0}
+  .mini-grid{grid-template-columns:1fr}
+  .xp{grid-template-columns:1fr;gap:20px}
+  .skill-row{grid-template-columns:1fr;gap:14px}
+  .edu-card{grid-template-columns:1fr}
+  .edu-card .gpa{text-align:left}
+  .section{padding:90px 22px}
+}
+@media(max-width:700px){
+  .nav-links{
+    display:none;position:absolute;top:52px;left:0;right:0;
+    flex-direction:column;align-items:stretch;padding:12px 22px 18px;gap:2px;
+    background:rgba(251,251,253,.95);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--hairline);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 10px;font-size:15px}
+  .menu-btn{display:block}
+  .bento{grid-template-columns:1fr}
+  .tile.c2,.tile.c3,.tile.c4,.tile.c6{grid-column:span 1}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition-duration:.01ms!important}
+  .js .reveal{opacity:1;transform:none}
+  .photo-sheen{animation:none;display:none}
+}
+/* =================== ABOUT / PHOTO =================== */
+.about-row{display:grid;grid-template-columns:.82fr 1fr;gap:70px;align-items:center}
+.photo-frame{
+  border-radius:32px;padding:3px;background:var(--grad);
+  box-shadow:0 30px 70px -28px rgba(10,132,255,.4);
+  max-width:400px;position:relative;
+}
+.photo-frame .inner{border-radius:29px;overflow:hidden;position:relative;background:#000;aspect-ratio:4/5}
+.photo-frame .inner::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(120% 80% at 50% 0%,rgba(255,255,255,.16),transparent 60%);
+}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-sheen{
+  position:absolute;top:0;left:-60%;width:40%;height:100%;z-index:2;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-18deg);
+  animation:sheen 7s ease-in-out infinite;
+}
+@keyframes sheen{
+  0%,72%{left:-60%}
+  88%,100%{left:130%}
+}
+.photo-frame .tag{
+  position:absolute;left:14px;bottom:14px;z-index:3;
+  font-size:12.5px;font-weight:500;color:#fff;
+  display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:100px;
+  background:rgba(0,0,0,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+.photo-frame .tag .dot{width:7px;height:7px;border-radius:50%;background:#30d158;box-shadow:0 0 8px rgba(48,209,88,.8)}
+.about-copy .f-title{max-width:14ch}
+.about-copy .f-copy+.f-copy{margin-top:14px}
+
+@media(max-width:900px){
+  .about-row{grid-template-columns:1fr;gap:40px}
+  .photo-frame{max-width:300px;margin:0 auto}
+}
+.pub-head{display:flex;align-items:baseline;gap:14px;margin:52px 0 18px}
+.pub-head:first-of-type{margin-top:6px}
+.pub-head h3{font-size:1.05rem;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.pub-head .ln{flex:1;height:1px;background:var(--hairline)}
+.pub-head .ct{font-family:var(--mono);font-size:12px;color:var(--text-2);white-space:nowrap}
+
+/* certificates */
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
+.cert-card{
+  background:var(--bg-tile);border-radius:22px;padding:28px;
+  box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.cert-card:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 16px 40px rgba(0,0,0,.09)}
+.cert-card .c-icon{
+  width:40px;height:40px;border-radius:12px;background:var(--grad);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+}
+.cert-card .c-icon svg{width:19px;height:19px;stroke:#fff}
+.cert-card h4{font-size:1rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.cert-card p{font-size:.88rem;color:var(--text-2);margin-top:8px;line-height:1.5}
+.cert-card .c-date{font-family:var(--mono);font-size:11px;color:var(--text-2);margin-top:14px;text-transform:uppercase;letter-spacing:.04em}
+
+@media(max-width:1000px){
+  .cert-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .cert-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- =================== NAV =================== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">Rohit Kumar Shaw</a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <a href="#contact" class="nav-cta">Get in touch</a>
+      <button class="menu-btn" id="menubtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- =================== HERO =================== -->
+<section class="hero" id="top">
+  <p class="eyebrow reveal">Rohit Kumar Shaw · Infrastructure Engineer</p>
+  <h1 class="reveal d1">Mainframe security. <span class="grad-text">Engineered for banks.</span></h1>
+  <p class="subhead reveal d2">I harden the z/OS systems that move money, at Bank of America and in published research. Encrypted transport, modern authentication, and AI-driven automation for platforms where downtime isn't an option.</p>
+  <div class="hero-actions reveal d3">
+    <a href="#work" class="pill">See the work</a>
+    <a href="#research" class="link-arrow">Read the research</a>
+  </div>
+  <div class="hero-badge reveal d3"><span class="dot"></span><span id="badge-text">AT-TLS handshake complete · channel secured</span></div>
+</section>
+
+<!-- =================== BENTO METRICS =================== -->
+<section class="section tight" id="impact">
+  <div class="container wide">
+    <div class="bento">
+      <div class="tile c4 grad-tile reveal">
+        <span class="t-label">AI operations portal</span>
+        <span class="t-num" data-count="35" data-pre="$" data-suf="K/yr">$35K/yr</span>
+        <span class="t-desc">Saved annually by one internal platform. Answers that took 15 minutes now take one.</span>
+      </div>
+      <div class="terminal c2 reveal d1" style="grid-column:span 2">
+        <div class="term-bar"><i></i><i></i><i></i><span>SYS1 — TSO</span></div>
+        <div class="term-body" id="term"><span class="ln"><span class="p">READY</span></span></div>
+      </div>
+      <div class="tile c2 reveal">
+        <span class="t-label">Kerberos SSO</span>
+        <span class="t-num" data-count="85" data-suf="%">85<span class="suf">%</span></span>
+        <span class="t-desc">Fewer password logins across z/OS.</span>
+      </div>
+      <div class="tile c2 dark-tile reveal d1">
+        <span class="t-label">SNMPv3 migration</span>
+        <span class="t-num" data-count="75" data-suf="%">75<span class="suf">%</span></span>
+        <span class="t-desc">Legacy risk retired. Community string, killed.</span>
+      </div>
+      <div class="tile c2 reveal d2">
+        <span class="t-label">AT-TLS at scale</span>
+        <span class="t-num" data-count="50" data-suf="+">50<span class="suf">+</span></span>
+        <span class="t-desc">Reusable transport security policies deployed via z/OSMF.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ABOUT =================== -->
+<section class="section" id="about" style="padding-top:0">
+  <div class="container">
+    <div class="about-row">
+      <div class="reveal">
+        <div class="photo-frame">
+          <div class="inner">
+            <img src="assets/rohit-photo.jpg" alt="Rohit Kumar Shaw" loading="lazy" />
+            <span class="photo-sheen"></span>
+          </div>
+          <span class="tag"><span class="dot"></span>Rohit Kumar Shaw</span>
+        </div>
+      </div>
+      <div class="about-copy reveal d1">
+        <p class="f-tag">Profile</p>
+        <h3 class="f-title">The engineer behind the channel.</h3>
+        <p class="f-copy">I'm Rohit, an Infrastructure Engineer at Bank of America with around three years focused on z/OS network security. My day to day lives in AT-TLS policy design, Kerberos SSO, and RACF integration, the plumbing most people never notice until it breaks.</p>
+        <p class="f-copy">Outside of production, I write. Eleven peer-reviewed papers and six trade articles, turning hands-on engineering into a repeatable, publishable body of work.</p>
+        <a class="link-arrow f-link" href="#research">Read the research</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== WORK =================== -->
+<section class="section" id="work">
+  <div class="container">
+    <p class="eyebrow reveal">Selected work</p>
+    <h2 class="headline reveal d1">Results you can put a number on.</h2>
+
+    <div class="feature">
+      <div class="reveal">
+        <p class="f-tag">AI automation</p>
+        <h3 class="f-title">An operations portal that answers in seconds.</h3>
+        <p class="f-copy">Architected and shipped an internal portal with AI-powered search over sysmod schedules, Excel trackers, and region data. Roughly <b>90% faster resolution</b>, 30% fewer escalations, and about 300 hours a year recovered across the team.</p>
+        <a class="link-arrow f-link" href="#research">See the related research</a>
+      </div>
+      <div class="f-visual v1 reveal d1">
+        <span class="big">$35K<span class="suf">/yr</span></span>
+        <span class="cap">recovered by replacing manual lookups with AI search</span>
+        <div class="chips"><span>RAG retrieval</span><span>Python</span><span>SMF logs</span><span>SharePoint</span></div>
+      </div>
+    </div>
+
+    <div class="feature flip">
+      <div class="reveal">
+        <p class="f-tag">Authentication</p>
+        <h3 class="f-title">Single sign-on for a platform born before SSO.</h3>
+        <p class="f-copy">Integrated NAS, RACF mappings, and OpenSSH GSS-API to bring Kerberos single sign-on to z/OS. Password logins fell <b>85%</b>, onboarding time dropped about 60%, and authentication tickets fell 40%.</p>
+      </div>
+      <div class="f-visual v2 reveal d1">
+        <span class="big">85<span class="suf">%</span></span>
+        <span class="cap">fewer password-based logins across the estate</span>
+        <div class="chips"><span>Kerberos</span><span>GSS-API</span><span>RACF</span><span>OpenSSH</span></div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="reveal">
+        <p class="f-tag">Protocol hardening</p>
+        <h3 class="f-title">SNMPv3 everywhere. No downtime.</h3>
+        <p class="f-copy">Overhauled SNMP across <b>100% of mainframe environments</b>, enforcing SNMPv3-only with AuthPriv and retiring the community string, cutting legacy risk exposure by 75% without interrupting monitoring.</p>
+      </div>
+      <div class="f-visual v3 reveal d1">
+        <span class="big">100<span class="suf">%</span></span>
+        <span class="cap">of environments migrated to authenticated, encrypted SNMP</span>
+        <div class="chips"><span>SNMPv3</span><span>AuthPriv</span><span>z/OS</span><span>Compliance</span></div>
+      </div>
+    </div>
+
+    <div class="feature flip">
+      <div class="reveal">
+        <p class="f-tag">Transport security</p>
+        <h3 class="f-title">AT-TLS policy architecture, standardized.</h3>
+        <p class="f-copy">Used z/OSMF to streamline AT-TLS deployment, cutting change turnaround 60% and shipping <b>50+ reusable policies</b>. Standardized TCP/IP across 20+ virtual and 30+ z/VM systems, secured 50+ ports, automated monthly IPSec key rotation, and held 100% secure channel uptime.</p>
+      </div>
+      <div class="f-visual v4 reveal d1">
+        <span class="big">50<span class="suf">+</span></span>
+        <span class="cap">reusable AT-TLS policies across the fleet</span>
+        <div class="chips"><span>AT-TLS</span><span>TLS 1.3</span><span>z/OSMF</span><span>IPSec</span><span>PKI</span></div>
+      </div>
+    </div>
+
+    <p class="eyebrow reveal" style="margin-top:70px">Earlier projects</p>
+    <div class="mini-grid">
+      <div class="mini reveal"><h4>UNT Rides</h4><p>Full-stack university carpooling platform with JWT sessions and real-time ride matching, cutting estimated commuting emissions about 30%.</p><div class="stack">React · Node.js · Firebase</div></div>
+      <div class="mini reveal d1"><h4>Color Vision Accessibility</h4><p>Tool letting users with color vision deficiencies simulate and adjust profiles, with 30% faster processing through optimized rendering.</p><div class="stack">JavaScript · Bootstrap · Firebase</div></div>
+      <div class="mini reveal d2"><h4>World Airline Route Engine</h4><p>C++ engine computing optimal international flight routes across thousands of paths using MST, BFS, and DFS.</p><div class="stack">C++ · Graph algorithms</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== EXPERIENCE (dark) =================== -->
+<section class="section dark" id="experience">
+  <div class="container">
+    <p class="eyebrow reveal">Experience</p>
+    <h2 class="headline reveal d1">A track record across the z/OS stack.</h2>
+    <div style="margin-top:60px">
+
+      <div class="xp reveal">
+        <div class="xp-meta">
+          <div class="role">Infrastructure Engineer</div>
+          <div class="co">Bank of America · Plano, TX</div>
+          <div class="date">Feb 2024 — Present</div>
+          <span class="xp-badge">Current</span>
+        </div>
+        <ul class="xp-points">
+          <li>Architected an AI-powered operations portal delivering <b>~90% faster answers</b> and <b>~$35K/yr</b> in savings.</li>
+          <li>Implemented Kerberos SSO across z/OS (NAS, RACF, OpenSSH GSS-API), reducing password logins <b>85%</b>.</li>
+          <li>Eliminated BasicAuth from all mainframe web servers via z/OS Connect EE with JWT/SAF bearer tokens.</li>
+          <li>Built an SSH authorized-keys compliance framework in USS feeding NetView and Comply Check reporting.</li>
+          <li>Enforced <b>SNMPv3 only</b> across 100% of environments and shipped <b>50+ reusable AT-TLS policies</b> via z/OSMF.</li>
+          <li>Led <b>z/OS 3.1 upgrade</b> validation for 15+ dependent systems and DR tests across 4+ environments with zero critical failures.</li>
+        </ul>
+      </div>
+
+      <div class="xp reveal">
+        <div class="xp-meta">
+          <div class="role">Global Technology Summer Analyst</div>
+          <div class="co">Bank of America · Plano, TX</div>
+          <div class="date">Jun 2023 — Aug 2023</div>
+        </div>
+        <ul class="xp-points">
+          <li>Built a Bash framework verifying <b>100+ GIS baseline</b> security rules, removing hours of manual checks per cycle.</li>
+          <li>Designed Splunk dashboards visualizing encrypted QUALYS scans to speed security review.</li>
+          <li>Found a critical IBM NetView defect and worked with IBM support to open an APAR.</li>
+        </ul>
+      </div>
+
+      <div class="xp reveal">
+        <div class="xp-meta">
+          <div class="role">Student Technology Specialist</div>
+          <div class="co">UNT Digital Strategy & Innovation · Denton, TX</div>
+          <div class="date">Feb 2023 — Dec 2023</div>
+        </div>
+        <ul class="xp-points">
+          <li>Delivered equipment training, maintenance, and repair across university classrooms and conference rooms.</li>
+        </ul>
+      </div>
+
+      <div class="xp reveal">
+        <div class="xp-meta">
+          <div class="role">IT Student Worker</div>
+          <div class="co">UNT Administrative IT Services · Denton, TX</div>
+          <div class="date">Nov 2021 — Feb 2023</div>
+        </div>
+        <ul class="xp-points">
+          <li>Exceeded IT service benchmarks by <b>25%</b> through ServiceNow ticketing, Active Directory updates, and fast resolution.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== RESEARCH =================== -->
+<section class="section" id="research">
+  <div class="container">
+    <p class="eyebrow reveal">Research & writing</p>
+    <h2 class="headline reveal d1">Production work, turned into published research.</h2>
+    <p class="subhead reveal d2">Eleven peer-reviewed papers and six trade articles documenting mainframe security modernization, written from hands-on engineering. <a href="https://scholar.google.com/citations?user=Cz85MnkAAAAJ&hl=en" target="_blank" rel="noopener" class="link-arrow">View on Google Scholar</a></p>
+
+    <div class="pub-list">
+      <div class="pub-head reveal"><h3>Peer-reviewed papers</h3><div class="ln"></div><span class="ct">11</span></div>
+      
+       <a class="pub-row reveal" href="https://doi.org/10.70917/ijcisim-2026-2915" target="_blank" rel="noopener">
+        <div><div class="kind">International Journal of Computer Information Systems and Industrial Management Applications · Scopus-indexed</div><div class="name">Zero-Trust Network Access on IBM z/OS: Applying BeyondCorp Principles to Mainframe Perimeter Architecture</div></div>
+        <span class="go">Read ›</span>
+      </a>
+      <a class="pub-row reveal" href="https://cspub-ijcisim.org/index.php/ijcisim/article/view/2036" target="_blank" rel="noopener">
+        <div><div class="kind">International Journal of Computer Information Systems and Industrial Management Applications · Vol. 18 No. 1s (2026)</div><div class="name">Zero-Touch Self-Healing Architecture (SHArch): Extending Autonomous Data Center Management to IBM z/OS</div></div>
+        <span class="go">Read ›</span>
+      </a>
+      <a class="pub-row reveal" href="https://doi.org/10.58425/ajt.v5i7.550" target="_blank" rel="noopener">
+        <div><div class="kind">American Journal of Technology</div><div class="name">The Role of AT-TLS in Modernizing Mainframe Network Security: A Comparative Analysis of Pre and Post AT-TLS Security Models</div></div>
+        <span class="go">Read ›</span>
+      </a>
+      <a class="pub-row reveal" href="https://doi.org/10.55708/js0506001" target="_blank" rel="noopener">
+        <div><div class="kind">JENRS</div><div class="name">SNMPv2 to SNMPv3 Migration in Financial Mainframes: Risk Reduction and a Repeatable Playbook</div></div>
+        <span class="go">Read ›</span>
+      </a>
+      <a class="pub-row reveal" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6910198&__cf_chl_f_tk=8lTvThGA5_3pGp28ZLvkXauSTZpPbiKu140oMGLHp2s-1783019446-1.0.1.1-MOwZrz4SOTlOfmZEqrjDmzfHCKge3o2sdeSaY1iwE4w" target="_blank" rel="noopener">
+        <div><div class="kind">Springer LNNS · Scopus, EI & WoS indexed</div><div class="name">RAG-Based Retrieval Systems for Enterprise Mainframe Operations: Accelerating Incident Response Through AI-Driven Knowledge Access</div></div>
+        <span class="go">Read ›</span>
+      </a>
+      <div class="pub-row reveal">
+        <div><div class="kind">IEEE ICCMC 2026</div><div class="name">Kerberos vs. Public Key Authentication in z/OS Environments: Performance, Scalability, and Security Trade-offs</div></div>
+        <span class="soon">Published</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">ICAIMIS 2026 · Bentham Science</div><div class="name">TLS 1.3 Adoption on z/OS: Modernizing Transport Security for Legacy Financial Systems</div></div>
+        <span class="soon">Published</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Q1 Journal · Intelligent Decision Making & Information Science</div><div class="name">Privileged Access Management for z/OS System Programmers: A Zero-Trust Control Framework for RACF, TSO, and SDSF Administrative Sessions</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Q1 Journal · Intelligent Decision Making & Information Science</div><div class="name">Security Isolation and Policy Enforcement for Docker Workloads on IBM zCX: A Threat Model and Control Framework </div></div>
+        <span class="soon">In preparation</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Cureus · Springer</div><div class="name">LLM-Assisted JCL Generation for Mainframe Automation</div></div>
+        <span class="soon">Under review</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">2026 International Conference on Artificial Intelligence and Project Engineering Governance · IEEE </div><div class="name">Post-Quantum Cryptography Readiness on z/OS: Assessing CPACF and AT-TLS Migration Paths for NIST FIPS 203/204/205 Compliance in Financial Mainframe Environments </div></div>
+        <span class="soon">Under review</span>
+      </div>
+
+      <div class="pub-head reveal"><h3>Trade & industry writing</h3><div class="ln"></div><span class="ct">6</span></div>
+
+      <a class="pub-row reveal" href="https://securityboulevard.com/2026/05/stop-letting-legacy-mainframe-services-manage-their-own-tls/" target="_blank" rel="noopener">
+        <div><div class="kind">Security Boulevard</div><div class="name">How We Standardized Transport Security for Legacy z/OS Workloads with AT-TLS</div></div>
+        <span class="go">Read ›</span>
+      </a>
+      <a class="pub-row reveal" href="https://techstrong.it/features/how-to-build-real-time-mainframe-dashboards-without-paying-for-a-splunk-license/" target="_blank" rel="noopener">
+        <div><div class="kind">Techstrong IT</div><div class="name">How to Build Real-Time Mainframe Dashboards Without Paying for a Splunk License</div></div>
+        <span class="go">Read ›</span>
+      </a>
+      <div class="pub-row reveal">
+        <div><div class="kind">Share'd Intelligence · Planet Mainframe</div><div class="name">Kill the Community String: Migrating z/OS SNMP to AuthPriv Without Downtime</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Share'd Intelligence</div><div class="name">SSH Authorized-Keys Governance: A Compliance Framework for z/OS</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">ACM Dallas</div><div class="name">AI-Driven RAG Retrieval for Mainframe Incident Response</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+      <div class="pub-row reveal">
+        <div><div class="kind">Open Mainframe Project</div><div class="name">Post-Quantum on z/OS: Start at the Handshake, Not the Hardware</div></div>
+        <span class="soon">Submitted</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== RECOGNITION: SPEAKING / JUDGING / PEER REVIEW =================== -->
+<section class="section" id="recognition" style="padding-top:0">
+  <div class="container">
+    <p class="eyebrow reveal">Speaking, judging & peer review</p>
+    <h2 class="headline reveal d1">Trusted to evaluate and present alongside the field.</h2>
+
+    <div class="skill-rows">
+      <div class="skill-row reveal">
+        <h4>Speaking</h4>
+        <div class="tags">
+          <span>Keynote Speaker — International Conference on AI-Driven Multidisciplinary Innovations and Sustainability (ICAIMIS 2026)</span>
+          <span>Invited Presenter — 7th International Conference on Data Analytics & Management (ICDAM-2026)</span>
+          <span>Presenter — IEEE · 9th International Conference on Computing Methodologies and Communication (ICCMC 2026)</span>
+          <span>Presenter — IEEE · INTERNATIONAL CONFERENCE ON ARTIFICIAL INTELLIGENCE AND PROJECT ENGINEERING GOVERNANCE (AIPEG 2026)</span>
+        </div>
+      </div>
+      <div class="skill-row reveal d1">
+        <h4>Judging</h4>
+        <div class="tags">
+          <span>Judge — 2nd SmallAI Hackathon</span>
+          <span>Session Chair — Sejong University, South Korea, 6th Intl. Conference on Paradigms of Communication, Computing and Data Analytics (PCCDA 2026)</span>
+        </div>
+      </div>
+      <div class="skill-row reveal d2">
+        <h4>Peer review</h4>
+        <div class="tags">
+          <span>10 completed reviews — 2026 IEEE International Conference on Contemporary Computing and Communications (InC4) IEEE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CERTIFICATES =================== -->
+<section class="section" id="certificates" style="padding-top:0">
+  <div class="container">
+    <p class="eyebrow reveal">Certificates</p>
+    <h2 class="headline reveal d1">Formal recognition along the way.</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg></div>
+        <h4>Judge — 2nd SmallAI Hackathon</h4>
+        <p>Judge for an AI-focused hackathon competition.</p>
+        <div class="c-date">April 2026</div>
+      </div>
+      <div class="cert-card reveal d1">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h4>Session Chair — Sejong University</h4>
+        <p>6th International Conference on Paradigms of Communication, South Korea.</p>
+        <div class="c-date">June 2026</div>
+      </div>
+      <div class="cert-card reveal d2">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h4>Peer Review Recognition</h4>
+        <p>10 completed peer reviews across IEEE and Springer venues.</p>
+        <div class="c-date">2026</div>
+      </div>
+      <a class="cert-card reveal d3" href="https://www.credly.com/badges/5df0dee4-f09a-4469-9409-d04f77d69b7a/public_url" target="_blank" rel="noopener" style="display:block">
+        <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h.01M12 14h4"/></svg></div>
+        <h4>IBM z/OS Mainframe Practitioner</h4>
+        <p>Issued by IBM. Foundational skills in z/OS and system administration via hands-on labs on a live IBM Z server.</p>
+      <div class="c-date">Credly · <span class="link-arrow" style="font-size:11px">View credential</span></div>
+</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SKILLS =================== -->
+<section class="section" id="skills" style="padding-top:0">
+  <div class="container">
+    <p class="eyebrow reveal">Skills</p>
+    <h2 class="headline reveal d1">The tools behind the work.</h2>
+
+    <div class="skill-rows">
+      <div class="skill-row reveal"><h4>Mainframe & z/OS</h4><div class="tags"><span>IBM z/OS</span><span>z/VM</span><span>ISPF</span><span>OMVS</span><span>z/OSMF</span><span>z/OS Connect EE</span><span>NetView</span><span>OMEGAMON</span><span>RACF</span><span>ACF2</span><span>CICS</span><span>AT-TLS</span><span>PAGENT</span><span>IKED</span><span>VTAM</span><span>TCP/IP</span><span>MQ</span><span>DB2</span></div></div>
+      <div class="skill-row reveal"><h4>Security & Auth</h4><div class="tags"><span>Kerberos / GSS-API</span><span>SNMPv3</span><span>TLS 1.3</span><span>IPSec</span><span>PKI / Certificates</span><span>Firewall Policy</span><span>Splunk</span><span>Burp Suite</span><span>Wireshark</span></div></div>
+      <div class="skill-row reveal"><h4>Languages</h4><div class="tags"><span>Python</span><span>COBOL</span><span>REXX</span><span>JCL</span><span>Bash</span><span>C / C++</span><span>Java</span><span>JavaScript</span><span>SQL</span><span>Node.js</span></div></div>
+      <div class="skill-row reveal"><h4>AI & Automation</h4><div class="tags"><span>RAG pipelines</span><span>SMF log AI search</span><span>Python automation</span><span>QUALYS</span><span>Ansible</span><span>Terraform</span></div></div>
+      <div class="skill-row reveal"><h4>Cloud & DevOps</h4><div class="tags"><span>AWS</span><span>GCP</span><span>Git</span><span>Docker</span><span>ServiceNow</span><span>MySQL</span><span>PostgreSQL</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== EDUCATION =================== -->
+<section class="section" id="education" style="padding-top:0">
+  <div class="container">
+    <p class="eyebrow reveal">Education</p>
+    <h2 class="headline reveal d1">Foundations.</h2>
+    <div class="edu-card reveal d1">
+      <div>
+        <h3>B.S. in Computer Science</h3>
+        <div class="meta">University of North Texas · Denton, TX · ABET Accredited · Graduated Dec 2023 · Cybersecurity Certificate</div>
+        <div class="course">Data Structures & Algorithms, Systems Programming, Computer Networks, Database Management, Software Engineering, Certified Ethical Hacking, Internet Programming, Linear Algebra, Statistics, Combinatorics & Graph Theory.</div>
+      </div>
+      <div class="gpa"><div class="g">3.51</div><div class="gl">GPA</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<section class="dark contact" id="contact">
+  <p class="eyebrow reveal">Contact</p>
+  <h2 class="headline reveal d1">Let's secure <span class="grad-text">something</span> together.</h2>
+  <p class="subhead center reveal d2">Open to infrastructure, systems programming, and security engineering roles. If you're building on the mainframe, let's talk.</p>
+  <div class="contact-actions reveal d2">
+    <a href="mailto:rohitshaw.infosec@gmail.com" class="pill">Email me</a>
+    <a href="https://linkedin.com/in/rohitkrshaw" target="_blank" rel="noopener" class="pill ghost">LinkedIn</a>
+  </div>
+  <div class="contact-links reveal d3">
+    <a href="mailto:rohitshaw.infosec@gmail.com">rohitshaw.infosec@gmail.com</a>
+    <a href="tel:+13322014552">(332) 201-4552</a>
+    <a href="https://rohitshaw.me" target="_blank" rel="noopener">rohitshaw.me</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-inner">
+    <span>© 2026 Rohit Kumar Shaw</span>
+    <span>Wylie, TX · z/OS Network Security</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* nav scroll state */
+var nav=document.getElementById('nav');
+function onScroll(){nav.classList.toggle('scrolled',window.scrollY>10);}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* mobile menu */
+var menuBtn=document.getElementById('menubtn'),navLinks=document.getElementById('navlinks');
+menuBtn.addEventListener('click',function(){navLinks.classList.toggle('open');});
+navLinks.addEventListener('click',function(e){if(e.target.tagName==='A')navLinks.classList.remove('open');});
+
+/* active section highlight */
+var anchors=[].slice.call(document.querySelectorAll('.nav-links a'));
+var secs=anchors.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+if('IntersectionObserver' in window){
+  var navObs=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        var id='#'+e.target.id;
+        anchors.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===id);});
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  secs.forEach(function(s){navObs.observe(s);});
+}
+
+/* reveal on scroll — with safety fallback */
+var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+function showAll(){reveals.forEach(function(el){el.classList.add('in');});}
+if(!('IntersectionObserver' in window)||reduced){
+  showAll();
+}else{
+  var revObs=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');revObs.unobserve(e.target);}
+    });
+  },{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+  reveals.forEach(function(el){revObs.observe(el);});
+  /* belt and suspenders: never leave content hidden */
+  setTimeout(function(){
+    reveals.forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<window.innerHeight&&r.bottom>0)el.classList.add('in');
+    });
+  },1200);
+}
+
+/* count-up numbers */
+function countUp(el){
+  var target=parseInt(el.getAttribute('data-count'),10);
+  var pre=el.getAttribute('data-pre')||'';
+  var suf=el.getAttribute('data-suf')||'';
+  var start=performance.now(),dur=1600;
+  function step(now){
+    var p=Math.min((now-start)/dur,1);
+    var eased=1-Math.pow(1-p,4);
+    var v=Math.round(eased*target);
+    el.innerHTML=pre+v+'<span class="suf">'+suf+'</span>';
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+if('IntersectionObserver' in window&&!reduced){
+  var cObs=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){countUp(e.target);cObs.unobserve(e.target);}
+    });
+  },{threshold:.5});
+  [].slice.call(document.querySelectorAll('[data-count]')).forEach(function(el){cObs.observe(el);});
+}
+
+/* terminal typing loop */
+var term=document.getElementById('term');
+if(term&&!reduced){
+  var script=[
+    ['p','READY'],
+    ['c','$ pasearch -t | grep TTLS'],
+    ['m','  TTLSRule: SecureAll_443  Status: ACTIVE'],
+    ['c','$ snmp -v3 -l authPriv status'],
+    ['m','  engine: authPriv  v2c: DISABLED'],
+    ['p','channel secured.']
+  ];
+  var li=0,ci=0,html='';
+  function typeLoop(){
+    if(li>=script.length){
+      setTimeout(function(){li=0;ci=0;html='';typeLoop();},6000);
+      return;
+    }
+    var line=script[li],cls=line[0],text=line[1];
+    ci++;
+    var cur=text.slice(0,ci);
+    term.innerHTML=html+'<span class="ln"><span class="'+cls+'">'+cur+'</span><span class="cursor"></span></span>';
+    if(ci>=text.length){
+      html+='<span class="ln"><span class="'+cls+'">'+text+'</span></span><br>';
+      li++;ci=0;
+      setTimeout(typeLoop,420);
+    }else{
+      setTimeout(typeLoop,28+Math.random()*40);
+    }
+  }
+  if('IntersectionObserver' in window){
+    var tObs=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){typeLoop();tObs.disconnect();}});
+    },{threshold:.4});
+    tObs.observe(term);
+  }else{typeLoop();}
+}
+
+/* hero badge decode */
+var badge=document.getElementById('badge-text');
+if(badge&&!reduced){
+  var finalText=badge.textContent;
+  var chars='ABCDEFGHJKLMNPQRSTUVWXYZ0123456789#%&<>*';
+  var bStart=null;
+  function decode(now){
+    if(!bStart)bStart=now;
+    var p=Math.min((now-bStart)/1100,1),n=finalText.length,out='';
+    for(var i=0;i<n;i++){
+      var c=finalText[i];
+      if(i<p*n||c===' '||c==='·')out+=c;
+      else if(/[A-Za-z0-9]/.test(c))out+=chars[(Math.random()*chars.length)|0];
+      else out+=c;
+    }
+    badge.textContent=out;
+    if(p<1)requestAnimationFrame(decode);else badge.textContent=finalText;
+  }
+  setTimeout(function(){requestAnimationFrame(decode);},600);
+}
+})();
+</script>
+</body>
+</html>
