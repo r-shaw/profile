@@ -105,7 +105,16 @@ img{max-width:100%;display:block}
   font-size:clamp(2.9rem,10vw,5.4rem);margin-top:18px}
 @media(min-width:900px){.hero-name{font-size:clamp(3.4rem,6.2vw,6.4rem)}}
 .hero-tag{font-weight:500;line-height:1.18;letter-spacing:-.015em;margin-top:22px;
-  font-size:clamp(1.15rem,3.2vw,2rem);max-width:19ch;color:var(--ink)}
+  font-size:clamp(1.15rem,3.2vw,2rem);max-width:22ch;color:var(--ink)}
+.role-slot{display:inline-block;white-space:nowrap;vertical-align:baseline;
+  transition:width .45s var(--ease)}
+.role{display:inline-block;color:#D7E2EA;background:var(--grad-num);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.role.out{animation:role-out .3s var(--ease) forwards}
+.role.in{animation:role-in .45s var(--ease)}
+@keyframes role-out{to{opacity:0;transform:translateY(-10px);filter:blur(4px)}}
+@keyframes role-in{from{opacity:0;transform:translateY(12px);filter:blur(5px)}
+                   to{opacity:1;transform:none;filter:blur(0)}}
 .hero-body{font-weight:300;line-height:1.55;margin-top:18px;color:var(--ink-dim);
   font-size:clamp(.95rem,1.3vw,1.1rem);max-width:50ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:34px}
@@ -418,7 +427,7 @@ footer{padding:0 0 36px}
     <div class="hero-copy">
       <p class="hero-kicker fi" style="--fy:16px;transition-delay:.1s">Mainframe security · 2026</p>
       <h1 class="hero-name hero-heading fi" style="--fy:36px;transition-delay:.18s">Rohit Kumar Shaw</h1>
-      <p class="hero-tag fi" style="--fy:24px;transition-delay:.3s">A z/OS specialist securing the mainframes that move money.</p>
+      <p class="hero-tag fi" style="--fy:24px;transition-delay:.3s">A <span class="role-slot"><span class="role" id="role">z/OS specialist</span></span> securing the mainframes that move money.</p>
       <p class="hero-body fi" style="--fy:20px;transition-delay:.4s">I harden z/OS at Bank of America and publish what I learn. Encrypted transport, modern authentication, and AI-driven automation for platforms where downtime isn&apos;t an option.</p>
       <div class="hero-actions fi" style="--fy:20px;transition-delay:.5s">
         <a href="#contact" class="btn-cta">Contact Me</a>
@@ -1068,6 +1077,52 @@ if(magnet && !reduced && matchMedia('(pointer:fine)').matches){
       magnet.style.transform = 'translate3d(0,0,0)';
     }
   },{passive:true});
+}
+
+/* ---------- rotating role ---------- */
+var ROLES = ['z/OS specialist','security architect','systems engineer','researcher'];
+var roleEl = document.getElementById('role');
+var roleSlot = roleEl ? roleEl.parentNode : null;
+if(roleEl && roleSlot){
+  var probe = document.createElement('span');
+  probe.setAttribute('aria-hidden','true');
+  probe.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;white-space:nowrap';
+
+  function measureRoles(){
+    var cs = getComputedStyle(roleEl);
+    probe.style.fontFamily = cs.fontFamily;
+    probe.style.fontSize = cs.fontSize;
+    probe.style.fontWeight = cs.fontWeight;
+    probe.style.letterSpacing = cs.letterSpacing;
+    document.body.appendChild(probe);
+    var max = 0;
+    ROLES.forEach(function(r){
+      probe.textContent = r;
+      max = Math.max(max, probe.getBoundingClientRect().width);
+    });
+    document.body.removeChild(probe);
+    var room = roleSlot.parentNode.clientWidth;
+    roleSlot.style.width = (max && max <= room) ? Math.ceil(max) + 'px' : 'auto';
+  }
+
+  measureRoles();
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(measureRoles); }
+  window.addEventListener('resize', measureRoles);
+
+  if(!reduced){
+    var ri = 0;
+    setInterval(function(){
+      roleEl.classList.remove('in');
+      roleEl.classList.add('out');
+      setTimeout(function(){
+        ri = (ri + 1) % ROLES.length;
+        roleEl.textContent = ROLES[ri];
+        roleEl.classList.remove('out');
+        void roleEl.offsetWidth;
+        roleEl.classList.add('in');
+      }, 300);
+    }, 2600);
+  }
 }
 
 /* ---------- count up ---------- */
