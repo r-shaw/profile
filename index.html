@@ -367,7 +367,7 @@ a.pub:hover{background:rgba(12,12,12,.035);padding-left:18px;padding-right:18px;
 @media(max-width:900px){.row{grid-template-columns:1fr;gap:14px}}
 
 /* ================= CERTS ================= */
-.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}
+.certs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:48px}
 .cert{border:1px solid var(--line);border-radius:24px;padding:26px;
   transition:border-color .4s var(--ease),transform .4s var(--ease)}
 .cert:hover{border-color:rgba(215,226,234,.35);transform:translateY(-4px)}
@@ -378,7 +378,8 @@ a.pub:hover{background:rgba(12,12,12,.035);padding-left:18px;padding-right:18px;
 .cert p{font-weight:300;font-size:.85rem;color:var(--ink-dim);margin-top:8px;line-height:1.5}
 .cert .d{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--ink-dim);margin-top:16px}
-@media(max-width:1000px){.certs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1360px){.certs{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.certs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.certs{grid-template-columns:1fr}}
 
 /* ================= EDUCATION ================= */
@@ -650,14 +651,14 @@ footer{padding:0 0 36px}
       <span class="state live">Read</span>
     </a>
 
-    <div class="pub fi">
+    <a class="pub fi" href="https://doi.org/10.1109/ICCMC69250.2026.11625111" target="_blank" rel="noopener">
       <span class="n">03</span>
       <span class="body">
         <span class="venue">IEEE · 9th Int. Conference on Computing Methodologies and Communication (ICCMC 2026)</span>
         <span class="title">Kerberos vs. Public Key Authentication in z/OS Environments: Performance, Scalability, and Security Trade-offs</span>
       </span>
-      <span class="state">Presented</span>
-    </div>
+      <span class="state live">Read</span>
+    </a>
 
     <a class="pub fi" href="https://doi.org/10.70917/ijcisim-2026-2036" target="_blank" rel="noopener">
       <span class="n">04</span>
@@ -891,6 +892,14 @@ footer{padding:0 0 36px}
         <span>10 completed reviews — 2026 IEEE Int. Conference on Contemporary Computing and Communications (InC4)</span>
       </div>
     </div>
+    <div class="row fi">
+      <h4>Mentorship</h4>
+      <div class="tags">
+        <span>Technical Mentor — CodePath</span>
+        <span>Resume Reviewer — CodePath</span>
+        <span>Mock Technical Interviewer — CodePath</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -923,6 +932,12 @@ footer{padding:0 0 36px}
       <h4>IBM z/OS Mainframe Practitioner</h4>
       <p>Issued by IBM. Foundational z/OS and system administration skills via hands-on labs on a live IBM Z server.</p>
       <div class="d">Credly · View credential ›</div>
+    </a>
+    <a class="cert fi" style="transition-delay:.32s;display:block" href="https://volunteer-credentials.codepath.org/credentials/fcb8d951-1cb6-49ab-97b9-9df577c40817" target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h4>CodePath Volunteer</h4>
+      <p>Resume reviewer, mentor, and mock technical interviewer for students breaking into software engineering.</p>
+      <div class="d">CodePath · View credential ›</div>
     </a>
   </div>
 </section>
