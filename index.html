@@ -414,6 +414,8 @@ a.pub:active{background:rgba(12,12,12,.06)}
   background:#7621B0;margin-right:8px;vertical-align:1px;
   animation:pip 1.9s ease-in-out infinite}
 @keyframes pip{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.22;transform:scale(.65)}}
+/* make the pip green for already-read / live items */
+.pub .state.live .pip{background:#30d158;box-shadow:0 0 8px rgba(48,209,88,.8)}
 .pub-group{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.18em;
   color:rgba(12,12,12,.45);display:flex;align-items:center;gap:16px;margin:56px 0 4px}
 .pub-group .rule{flex:1;height:1px;background:rgba(12,12,12,.15)}
@@ -1340,8 +1342,8 @@ if(researchHead && !reduced){
   }else{ researchHead.classList.add('lit'); }
 }
 
-/* pulsing pip on every entry that isn't published yet */
-[].forEach.call(document.querySelectorAll('.pub .state:not(.live)'), function(s){
+/* pulsing pip on every entry (include Read/live) */
+[].forEach.call(document.querySelectorAll('.pub .state'), function(s){
   var pip = document.createElement('span');
   pip.className = 'pip';
   s.insertBefore(pip, s.firstChild);
